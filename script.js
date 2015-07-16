@@ -18,26 +18,42 @@ var turnCount = 0;
 //   }
 // });
 
-
 //Here I'm trying to establish the turns.
-$('#container').on('click', function(){
+// $('.box').on('click', function(event){
+//   console.log(event);
+  
   if (turnCount === 0) {
-    $('#box0').text("X");
-    $('#box1').text("X");
-    $('#box2').text("X");
-    $('#box3').text("X");
-    $('#box4').text("X");
-    $('#box5').text("X");
-    $('#box6').text("X");
-    $('#box7').text("X");
-    $('#box8').text("X");
+    $('#box0').on('click', function(event){
+      $('#box0').text("X");
+    });
+    $('#box1').on('click', function(event){
+      $('#box1').text("X");
+    });
+    $('#box2').on('click', function(event){
+      $('#box2').text("X");
+    })
+    $('#box3').on('click', function(event){
+      $('#box3').text("X");
+    })  
+    $('#box4').on('click', function(event){
+      $('#box4').text("X");
+    })
+    $('#box5').on('click', function(event){
+      $('#box5').text("X");
+    })
+    $('#box6').on('click', function(event){
+      $('#box6').text("X");
+    })
+    $('#box7').on('click', function(event){
+      $('#box7').text("X");
+    })
+    $('#box8').on('click', function(event){
+      $('#box8').text("X");
+    })
     //This seems to fill all of the boxes with an X no matter which one you click at the same time.
     //Maybe create an array and grab each id of each box and push it in the new array?
     turnCount++;
     console.log(turnCount);
   };
   //Here continue else if statements until all 9 turns are completed and alternate between "X" and "O" for each turn. Doing this until I can figure out a faster less verbose way.
-});
-
-
-
+// });
