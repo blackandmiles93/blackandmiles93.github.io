@@ -9,25 +9,19 @@ console.log("linked!");
 //Creating the players essentially by turnCount. Each turn will cause the box innerText to be either and "X" or an "O".
 var turnCount = 1;
   $('#container').on('click', function(event){
-   var player = event.target; //the target of the event are the boxes. 
-    if (turnCount % 2 != 0) { //odd turns are "X".
-      player.innerText = "X";
+    var player = event.target; //the target of the event are the boxes.
+    if (player.innerText === "") { 
+      if (turnCount % 2 != 0) { //odd turns are "X".
+        player.innerText = "X";
 
     //$(player).stopPropagation();
-    }
-    else if (turnCount % 2 === 0) { //Even turns are "O".
-      player.innerText = "O";
+      }
+      else if (turnCount % 2 === 0) { //Even turns are "O".
+        player.innerText = "O";
 
     //$(player).stopPropagation();
+      };
     };
-
-    /*Attempting to eliminate the ability for players to use boxes that have already been used. */
-    if (player.innerText === "X") {
-      player.innerText != "O";
-    } 
-    else if (player.innerText == "O") {
-      player.innerText != "X";
-    }; 
 
     console.log(event);
     console.log(turnCount);
@@ -37,4 +31,7 @@ var turnCount = 1;
   //if a box is not undefined,
   //then, cannot target event.
 
+  // var winCombo = function() {
+  //   if 
+  // }
 
