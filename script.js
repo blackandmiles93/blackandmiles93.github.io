@@ -6,17 +6,35 @@ console.log("linked!");
 
 //This takes the parent element and adds the event listener which essentially trickles down to the child elements.
 
+//Creating the players essentially by turnCount. Each turn will cause the box innerText to be either and "X" or an "O".
 var turnCount = 1;
   $('#container').on('click', function(event){
-    if (turnCount % 2 != 0) {
-     var player1 = event.target;
-     player1.innerText = "X";
+   var player = event.target; //the target of the event are the boxes. 
+    if (turnCount % 2 != 0) { //odd turns are "X".
+      player.innerText = "X";
+
+    //$(player).stopPropagation();
     }
-    else if (turnCount % 2 === 0) {
-      var player2 = event.target;
-      player2.innerText = "O";
-    }
+    else if (turnCount % 2 === 0) { //Even turns are "O".
+      player.innerText = "O";
+
+    //$(player).stopPropagation();
+    };
+
+    /*Attempting to eliminate the ability for players to use boxes that have already been used. */
+    if (player.innerText === "X") {
+      player.innerText != "O";
+    } 
+    else if (player.innerText == "O") {
+      player.innerText != "X";
+    }; 
+
     console.log(event);
     console.log(turnCount);
     turnCount++;
   });
+
+  //if a box is not undefined,
+  //then, cannot target event.
+
+
