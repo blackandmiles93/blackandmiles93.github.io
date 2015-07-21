@@ -1,14 +1,28 @@
+html {
+ box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+ -webkit-box-sizing: inherit;
+ -moz-box-sizing: inherit;
+ box-sizing: inherit; 
+}
+
 body{
   background-color: black;
 }
+
 #container{
   width: 730px;
   margin: auto;
   background-color: black;
+  font-family: 
 }
 
-.heading{
+h1{
   text-align: center;
+  font-family: 'Shadows Into Light', cursive;
   color: blue;
 }
 
@@ -21,6 +35,23 @@ body{
   background: blue;
   vertical-align: top;
   text-align: center;
+  font-size: 50px;
+  font-family: Shadows Into Light;
   background-size: cover;
-  padding: 10px;
+  padding: 70px;
+} 
+#box0{
+  background-color: cyan;
+}
+#box2{
+  background-color: cyan;
+}
+#box4{
+  background-color: cyan;
+}
+#box6{
+  background-color: cyan;
+}
+#box8{
+  background-color: cyan;
 }
