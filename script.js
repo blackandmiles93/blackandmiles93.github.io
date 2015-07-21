@@ -11,7 +11,7 @@ var multiPlayerButton = $('.mode2');
 var guessCount = 0;
 
 $('.mode2').on('click', function() {
-  $('#container').on('click', function(event){
+  $('#container').on('click', function(event) {
     var player = event.target; //the target of the event are the boxes.
     if (player.innerText === "") { 
       if (turnCount % 2 != 0) { //odd turns are "X".
@@ -34,21 +34,25 @@ $('.mode2').on('click', function() {
     turnCount++;
 
     // var winConditions = function() {
-      /* Horizontal
-      var win1 = document.querySelector('#box0').innerText === document.querySelector('#box1').innerText && document.querySelector('#box1').innerText === document.querySelector('#box2').innerText;
-      var win2 = document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box5').innerText;
-      var win3 = document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box7').innerText === document.querySelector('#box8').innerText;
-      */
-      /* Vertical
-      var win4 = document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box3').innerText === document.querySelector('#box6').innerText;
-      var win5 = document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box7').innerText;
-      var win6 = document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box5').innerText === document.querySelector('#box8').innerText;
-      */
-      /* Diagnol
-      var win7 = document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box6').innerText;
-      var win8 = document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box8').innerText;
-      */
-      console.log("player",player.innerText);
+    //    // Horizontal
+    //   var win1 = document.querySelector('#box0').innerText === document.querySelector('#box1').innerText && document.querySelector('#box1').innerText === document.querySelector('#box2').innerText;
+    //   var win2 = document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box5').innerText;
+    //   var win3 = document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box7').innerText === document.querySelector('#box8').innerText;
+      
+    //    // Vertical
+    //   var win4 = document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box3').innerText === document.querySelector('#box6').innerText;
+    //   var win5 = document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box7').innerText;
+    //   var win6 = document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box5').innerText === document.querySelector('#box8').innerText;
+      
+    //    // Diagnol
+    //   var win7 = document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box6').innerText;
+    //   var win8 = document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box8').innerText;
+      
+    //   console.log("player",player.innerText);
+      
+    //   return winConditions();
+    // }
+    // winConditions();
 
       if (document.querySelector('#box0').innerText != "" && document.querySelector('#box1').innerText != "" && document.querySelector('#box2').innerText != "") {
         if(document.querySelector('#box0').innerText === document.querySelector('#box1').innerText && document.querySelector('#box0').innerText === document.querySelector('#box2').innerText) {
@@ -57,42 +61,39 @@ $('.mode2').on('click', function() {
       }
       else if (document.querySelector('#box3').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box5').innerText != "") {
         if (document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box3').innerText === document.querySelector('#box5').innerText) {
-          alert("winner! Two row!");
+          alert("Winner! Two row!");
         }
       }
       else if (document.querySelector('#box6').innerText != "" && document.querySelector('#box7').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box6').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Row third!");
+          alert("Winner! Row third!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box3').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box0').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! Column one!");
+          alert("Winner! Column one!");
         }
       }
       else if (document.querySelector('#box1').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box7').innerText != "") {
         if (document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box1').innerText === document.querySelector('#box7').innerText) {
-          alert("winner! Column two!");
+          alert("Winner! Column two!");
         }        
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box5').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box2').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Column three!");
+          alert("Winner! Column three!");
         }
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box2').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! First Diagnol!");
+          alert("Winner! First Diagnol!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box0').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Second Diagnol!");
+          alert("Winner! Second Diagnol!");
         }
       }
-      // else if (document.querySelectorAll('#box') != "") {
-      //   alert("It's a tie!");
-      // }
       //Here the win conditions are set. They cover all horizontal, vertical, and diagnol combinations.
   });
       
@@ -125,37 +126,37 @@ $('.mode1').on('click', function() {
       }
       else if (document.querySelector('#box3').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box5').innerText != "") {
         if (document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box3').innerText === document.querySelector('#box5').innerText) {
-          alert("winner! Two row!");
+          alert("Winner! Two row!");
         }
       }
       else if (document.querySelector('#box6').innerText != "" && document.querySelector('#box7').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box6').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Row third!");
+          alert("Winner! Row third!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box3').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box0').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! Column one!");
+          alert("Winner! Column one!");
         }
       }
       else if (document.querySelector('#box1').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box7').innerText != "") {
         if (document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box1').innerText === document.querySelector('#box7').innerText) {
-          alert("winner! Column two!");
+          alert("Winner! Column two!");
         }        
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box5').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box2').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Column three!");
+          alert("Winner! Column three!");
         }
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box2').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! First Diagnol!");
+          alert("Winner! First Diagnol!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box0').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Second Diagnol!");
+          alert("Winner! Second Diagnol!");
         }
       }
     }
@@ -167,40 +168,39 @@ $('.mode1').on('click', function() {
       }
       else if (document.querySelector('#box3').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box5').innerText != "") {
         if (document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box3').innerText === document.querySelector('#box5').innerText) {
-          alert("winner! Two row!");
+          alert("Winner! Two row!");
         }
       }
       else if (document.querySelector('#box6').innerText != "" && document.querySelector('#box7').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box6').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Row third!");
+          alert("Winner! Row third!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box3').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box0').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! Column one!");
+          alert("Winner! Column one!");
         }
       }
       else if (document.querySelector('#box1').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box7').innerText != "") {
         if (document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box1').innerText === document.querySelector('#box7').innerText) {
-          alert("winner! Column two!");
+          alert("Winner! Column two!");
         }        
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box5').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box2').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Column three!");
+          alert("Winner! Column three!");
         }
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box2').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! First Diagnol!");
+          alert("Winner! First Diagnol!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box0').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! Second Diagnol!");
+          alert("Winner! Second Diagnol!");
         }
       }
-
   });
 });
 
