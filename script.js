@@ -120,95 +120,89 @@ $('.mode1').on('click', function() {
       document.querySelector(boxes).innerText = "O"; // This allows the computer to randomly select a spot of the 9 available and place an "O" there.
       if (document.querySelector('#box0').innerText != "" && document.querySelector('#box1').innerText != "" && document.querySelector('#box2').innerText != "") {
         if(document.querySelector('#box0').innerText === document.querySelector('#box1').innerText && document.querySelector('#box0').innerText === document.querySelector('#box2').innerText) {
-          alert("Winner! Top Row");
+          alert("Winner! Row one!");
         }
       }
       else if (document.querySelector('#box3').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box5').innerText != "") {
         if (document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box3').innerText === document.querySelector('#box5').innerText) {
-          alert("winner! second row");
+          alert("winner! Two row!");
         }
       }
       else if (document.querySelector('#box6').innerText != "" && document.querySelector('#box7').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box6').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! third row");
+          alert("winner! Row third!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box3').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box0').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! column 1");
+          alert("winner! Column one!");
         }
       }
       else if (document.querySelector('#box1').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box7').innerText != "") {
         if (document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box1').innerText === document.querySelector('#box7').innerText) {
-          alert("winner! column 2");
+          alert("winner! Column two!");
         }        
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box5').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box2').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! column 3");
+          alert("winner! Column three!");
         }
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box6').innerText != "") {
         if (document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box2').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! diagnol 1");
+          alert("winner! First Diagnol!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box8').innerText != "") {
         if (document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box0').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! diagnol 2");
+          alert("winner! Second Diagnol!");
         }
-      };
+      }
     }
 
       if (document.querySelector('#box0').innerText != "" && document.querySelector('#box1').innerText != "" && document.querySelector('#box2').innerText != "") {
-        if(document.querySelector('#box0').innerText === document.querySelector('#box1').innerText && document.querySelector('#box1').innerText === document.querySelector('#box2').innerText) {
-          alert("Winner! Top Row");
+        if(document.querySelector('#box0').innerText === document.querySelector('#box1').innerText && document.querySelector('#box0').innerText === document.querySelector('#box2').innerText) {
+          alert("Winner! Row one!");
         }
       }
       else if (document.querySelector('#box3').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box5').innerText != "") {
-        if (document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box5').innerText) {
-          alert("winner! second row");
+        if (document.querySelector('#box3').innerText === document.querySelector('#box4').innerText && document.querySelector('#box3').innerText === document.querySelector('#box5').innerText) {
+          alert("winner! Two row!");
         }
       }
       else if (document.querySelector('#box6').innerText != "" && document.querySelector('#box7').innerText != "" && document.querySelector('#box8').innerText != "") {
-        if (document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box7').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! third row");
+        if (document.querySelector('#box6').innerText === document.querySelector('#box7').innerText && document.querySelector('#box6').innerText === document.querySelector('#box8').innerText) {
+          alert("winner! Row third!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box3').innerText != "" && document.querySelector('#box6').innerText != "") {
-        if (document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box3').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! column 1");
+        if (document.querySelector('#box0').innerText === document.querySelector('#box3').innerText && document.querySelector('#box0').innerText === document.querySelector('#box6').innerText) {
+          alert("winner! Column one!");
         }
       }
       else if (document.querySelector('#box1').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box7').innerText != "") {
-        if (document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box7').innerText) {
-          alert("winner! column 2");
+        if (document.querySelector('#box1').innerText === document.querySelector('#box4').innerText && document.querySelector('#box1').innerText === document.querySelector('#box7').innerText) {
+          alert("winner! Column two!");
         }        
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box5').innerText != "" && document.querySelector('#box8').innerText != "") {
-        if (document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box5').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! column 3");
+        if (document.querySelector('#box2').innerText === document.querySelector('#box5').innerText && document.querySelector('#box2').innerText === document.querySelector('#box8').innerText) {
+          alert("winner! Column three!");
         }
       }
       else if (document.querySelector('#box2').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box6').innerText != "") {
-        if (document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box6').innerText) {
-          alert("winner! diagnol 1");
+        if (document.querySelector('#box2').innerText === document.querySelector('#box4').innerText && document.querySelector('#box2').innerText === document.querySelector('#box6').innerText) {
+          alert("winner! First Diagnol!");
         }
       }
       else if (document.querySelector('#box0').innerText != "" && document.querySelector('#box4').innerText != "" && document.querySelector('#box8').innerText != "") {
-        if (document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box4').innerText === document.querySelector('#box8').innerText) {
-          alert("winner! diagnol 2");
+        if (document.querySelector('#box0').innerText === document.querySelector('#box4').innerText && document.querySelector('#box0').innerText === document.querySelector('#box8').innerText) {
+          alert("winner! Second Diagnol!");
         }
-      };
+      }
 
   });
 });
-
-
-
-//Fix winning conditions so that they actually work
-//Set up AI
-//CSS
 
 
 
